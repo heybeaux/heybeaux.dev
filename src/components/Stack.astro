@@ -1,0 +1,32 @@
+---
+// Stack section - Tools I've used recently
+
+const tools = [
+  "TypeScript",
+  "Node.js",
+  "React",
+  "Astro",
+  "PostgreSQL",
+  "Tailwind",
+  "Vercel",
+  "Git",
+  "Linux",
+  "Claude"
+];
+---
+
+<section class="mb-20">
+  <h2 class="text-xl mb-6 text-[var(--color-muted)]">## Stack</h2>
+  
+  <p class="mb-4 text-[var(--color-muted)]">
+    Tools I've used recently. Not a complete list, just what's been in rotation:
+  </p>
+  
+  <div class="flex flex-wrap gap-2">
+    {tools.map((tool) => (
+      <span class="font-mono text-sm px-3 py-1 bg-[var(--color-border)] rounded">
+        {tool}
+      </span>
+    ))}
+  </div>
+</section>

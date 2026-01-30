@@ -1,0 +1,59 @@
+---
+// Work section - Project cards
+
+interface Project {
+  name: string;
+  role: string;
+  description: string;
+  link?: string;
+}
+
+const projects: Project[] = [
+  {
+    name: "Generosity Catalyst",
+    role: "Fractional CTO",
+    description: "Building the tech stack for a nonprofit that helps other nonprofits get funded. All the architecture decisions, none of the bureaucracy.",
+    link: "#"
+  },
+  {
+    name: "WhaleHawk Intelligence",
+    role: "Developer",
+    description: "Monitoring tools for tracking large crypto movements. When whales move, people want to know.",
+    link: "#"
+  },
+  {
+    name: "Wilderness Committee",
+    role: "Contractor",
+    description: "Tech support for people trying to keep old-growth forests standing. The stakes feel real.",
+    link: "#"
+  }
+];
+---
+
+<section class="mb-20">
+  <h2 class="text-xl mb-8 text-[var(--color-muted)]">## Work</h2>
+  
+  <div class="space-y-8">
+    {projects.map((project) => (
+      <article class="border-l-2 border-[var(--color-border)] pl-6 py-2 hover:border-[var(--color-accent)] transition-colors">
+        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+          <h3 class="text-lg font-medium">
+            {project.link && project.link !== "#" ? (
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.name}
+              </a>
+            ) : (
+              project.name
+            )}
+          </h3>
+          <span class="text-sm text-[var(--color-muted)] font-mono">
+            {project.role}
+          </span>
+        </div>
+        <p class="text-[var(--color-muted)]">
+          {project.description}
+        </p>
+      </article>
+    ))}
+  </div>
+</section>
