@@ -5,55 +5,74 @@ interface Project {
   name: string;
   role: string;
   description: string;
+  tech?: string[];
   link?: string;
+  status?: 'active' | 'completed';
 }
 
 const projects: Project[] = [
   {
     name: "Generosity Catalyst",
     role: "Fractional CTO",
-    description: "Building the tech stack for a nonprofit that helps other nonprofits get funded. All the architecture decisions, none of the bureaucracy.",
-    link: "#"
+    description: "Building the tech stack for a nonprofit marketplace that connects donors with causes. All the architecture decisions, none of the bureaucracy.",
+    tech: ["Next.js", "Supabase", "Stripe"],
+    status: "active"
   },
   {
     name: "WhaleHawk Intelligence",
-    role: "Developer",
-    description: "Monitoring tools for tracking large crypto movements. When whales move, people want to know.",
-    link: "#"
+    role: "Full-Stack Developer",
+    description: "Sales intelligence platform for healthcare. Salesforce integration, data pipelines, the kind of stuff that breaks if you're not careful.",
+    tech: ["Apex", "LWC", "React"],
+    status: "active"
   },
   {
     name: "Wilderness Committee",
-    role: "Contractor",
-    description: "Tech support for people trying to keep old-growth forests standing. The stakes feel real.",
-    link: "#"
+    role: "Digital Fundraising",
+    description: "Rebuilt their fundraising infrastructure. Migrated 10 years of donor data without losing a record. They raise more money now.",
+    tech: ["Salesforce", "CiviCRM", "Node.js"],
+    status: "completed"
   }
 ];
 ---
 
-<section class="mb-20">
-  <h2 class="text-xl mb-8 text-[var(--color-muted)]">## Work</h2>
+<section class="mb-16">
+  <h2 class="text-sm font-mono text-[var(--color-accent)] mb-6 uppercase tracking-wider">
+    Work
+  </h2>
   
-  <div class="space-y-8">
+  <div class="grid gap-4">
     {projects.map((project) => (
-      <article class="border-l-2 border-[var(--color-border)] pl-6 py-2 hover:border-[var(--color-accent)] transition-colors">
-        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
-          <h3 class="text-lg font-medium">
-            {project.link && project.link !== "#" ? (
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                {project.name}
-              </a>
-            ) : (
-              project.name
+      <article class="card p-6 group">
+        <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+          <div class="flex items-center gap-3">
+            <h3 class="text-lg font-semibold group-hover:text-[var(--color-accent)] transition-colors">
+              {project.name}
+            </h3>
+            {project.status === 'active' && (
+              <span class="tag">Active</span>
             )}
-          </h3>
+          </div>
           <span class="text-sm text-[var(--color-muted)] font-mono">
             {project.role}
           </span>
         </div>
-        <p class="text-[var(--color-muted)]">
+        
+        <p class="text-[var(--color-muted)] mb-4">
           {project.description}
         </p>
+        
+        {project.tech && (
+          <div class="flex flex-wrap gap-2">
+            {project.tech.map((t) => (
+              <span class="text-xs font-mono text-[var(--color-muted)] bg-[var(--color-bg)] px-2 py-1 rounded border border-[var(--color-border)]">
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
       </article>
     ))}
   </div>
 </section>
+
+<div class="section-divider"></div>

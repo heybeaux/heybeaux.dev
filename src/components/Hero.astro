@@ -2,13 +2,29 @@
 // Hero section - Name, one-liner, current work
 ---
 
-<section class="mb-20">
-  <h1 class="text-3xl md:text-4xl mb-4">Beaux Walton</h1>
-  <p class="text-[var(--color-muted)] text-lg mb-6">
-    Powell River, BC
+<section class="mb-16">
+  <!-- Name with accent underline -->
+  <div class="mb-6">
+    <h1 class="text-4xl md:text-5xl mb-2 inline-block">
+      Beaux Walton
+      <span class="block h-1 bg-[var(--color-accent)] mt-2 w-24"></span>
+    </h1>
+  </div>
+  
+  <!-- Location with status -->
+  <p class="text-[var(--color-muted)] text-base mb-8 flex items-center font-mono">
+    <span class="status-dot"></span>
+    Powell River, BC · Available for projects
   </p>
-  <p class="text-xl md:text-2xl leading-relaxed">
-    Ex-army mechanic turned coder.<br />
-    I build whatever needs building.
-  </p>
+  
+  <!-- Tagline in a subtle card -->
+  <div class="card p-6 md:p-8">
+    <p class="text-xl md:text-2xl leading-relaxed mb-4">
+      Ex-army mechanic turned coder.
+    </p>
+    <p class="text-lg text-[var(--color-muted)]">
+      I build whatever needs building — web apps, integrations, 
+      the unglamorous stuff that actually makes businesses run.
+    </p>
+  </div>
 </section>

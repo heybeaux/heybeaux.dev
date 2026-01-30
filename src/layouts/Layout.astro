@@ -7,26 +7,39 @@ interface Props {
 }
 
 const { 
-  title = "Beaux Walton", 
-  description = "Ex-army mechanic turned coder. I build things." 
+  title = "Beaux Walton — Developer", 
+  description = "Ex-army mechanic turned coder. I build whatever needs building." 
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen">
-    <main class="max-w-2xl mx-auto px-6 py-16 md:py-24">
+  <body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+    <!-- Top accent bar -->
+    <div class="h-1 bg-[var(--color-accent)]"></div>
+    
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-20">
       <slot />
     </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-[var(--color-border)] mt-20">
+      <div class="max-w-3xl mx-auto px-6 py-8">
+        <p class="text-sm text-[var(--color-muted)] font-mono">
+          Made in Powell River, BC · {new Date().getFullYear()}
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

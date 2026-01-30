@@ -1,32 +1,57 @@
 ---
 // Stack section - Tools I've used recently
 
-const tools = [
-  "TypeScript",
-  "Node.js",
-  "React",
-  "Astro",
-  "PostgreSQL",
-  "Tailwind",
-  "Vercel",
-  "Git",
-  "Linux",
-  "Claude"
+interface ToolCategory {
+  label: string;
+  tools: string[];
+}
+
+const categories: ToolCategory[] = [
+  {
+    label: "Languages",
+    tools: ["TypeScript", "JavaScript", "Python", "Apex"]
+  },
+  {
+    label: "Frontend",
+    tools: ["React", "Next.js", "Astro", "Tailwind", "LWC"]
+  },
+  {
+    label: "Backend",
+    tools: ["Node.js", "PostgreSQL", "Supabase", "Salesforce"]
+  },
+  {
+    label: "Tools",
+    tools: ["Git", "Linux", "Vercel", "Claude"]
+  }
 ];
 ---
 
-<section class="mb-20">
-  <h2 class="text-xl mb-6 text-[var(--color-muted)]">## Stack</h2>
+<section class="mb-16">
+  <h2 class="text-sm font-mono text-[var(--color-accent)] mb-6 uppercase tracking-wider">
+    Toolkit
+  </h2>
   
-  <p class="mb-4 text-[var(--color-muted)]">
-    Tools I've used recently. Not a complete list, just what's been in rotation:
+  <p class="mb-6 text-[var(--color-muted)]">
+    What's been in rotation lately. Not a brag list — just what I've actually shipped with recently.
   </p>
   
-  <div class="flex flex-wrap gap-2">
-    {tools.map((tool) => (
-      <span class="font-mono text-sm px-3 py-1 bg-[var(--color-border)] rounded">
-        {tool}
-      </span>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    {categories.map((cat) => (
+      <div class="space-y-2">
+        <h3 class="text-xs font-mono text-[var(--color-muted)] uppercase tracking-wider">
+          {cat.label}
+        </h3>
+        <ul class="space-y-1">
+          {cat.tools.map((tool) => (
+            <li class="font-mono text-sm flex items-center">
+              <span class="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full mr-2"></span>
+              {tool}
+            </li>
+          ))}
+        </ul>
+      </div>
     ))}
   </div>
 </section>
+
+<div class="section-divider"></div>
