@@ -1,26 +1,25 @@
 ---
-// Blog section - Recent articles
+// Blog section - Recent articles from content collection
+import { getCollection } from 'astro:content';
 
-interface Post {
-  title: string;
-  date: string;
-  excerpt: string;
-  slug: string;
-  tags?: string[];
+// Get published posts, sorted by date
+const allPosts = await getCollection('blog', ({ data }) => {
+  return import.meta.env.PROD ? !data.draft : true;
+});
+
+const posts = allPosts
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3); // Show latest 3 on homepage
+
+const hasPosts = posts.length > 0;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
 }
-
-// Placeholder posts - replace with real content or fetch from CMS/markdown
-const posts: Post[] = [
-  {
-    title: "Coming Soon",
-    date: "2026",
-    excerpt: "Writing about building things, breaking things, and occasionally fixing them. Stay tuned.",
-    slug: "#",
-    tags: ["meta"]
-  }
-];
-
-const hasPosts = posts.length > 1 || posts[0]?.slug !== "#";
 ---
 
 <section class="mb-16">
@@ -41,18 +40,18 @@ const hasPosts = posts.length > 1 || posts[0]?.slug !== "#";
         <a href={`/blog/${post.slug}`} class="card p-6 group block">
           <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
             <h3 class="text-lg font-semibold group-hover:text-[var(--color-accent)] transition-colors">
-              {post.title}
+              {post.data.title}
             </h3>
             <span class="text-sm text-[var(--color-muted)] font-mono">
-              {post.date}
+              {formatDate(post.data.date)}
             </span>
           </div>
           <p class="text-[var(--color-muted)]">
-            {post.excerpt}
+            {post.data.excerpt}
           </p>
-          {post.tags && (
+          {post.data.tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mt-3">
-              {post.tags.map((tag) => (
+              {post.data.tags.map((tag) => (
                 <span class="text-xs font-mono text-[var(--color-muted)] bg-[var(--color-bg)] px-2 py-1 rounded border border-[var(--color-border)]">
                   #{tag}
                 </span>
