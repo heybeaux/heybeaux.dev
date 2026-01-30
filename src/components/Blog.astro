@@ -1,0 +1,77 @@
+---
+// Blog section - Recent articles
+
+interface Post {
+  title: string;
+  date: string;
+  excerpt: string;
+  slug: string;
+  tags?: string[];
+}
+
+// Placeholder posts - replace with real content or fetch from CMS/markdown
+const posts: Post[] = [
+  {
+    title: "Coming Soon",
+    date: "2026",
+    excerpt: "Writing about building things, breaking things, and occasionally fixing them. Stay tuned.",
+    slug: "#",
+    tags: ["meta"]
+  }
+];
+
+const hasPosts = posts.length > 1 || posts[0]?.slug !== "#";
+---
+
+<section class="mb-16">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-sm font-mono text-[var(--color-accent)] uppercase tracking-wider">
+      Writing
+    </h2>
+    {hasPosts && (
+      <a href="/blog" class="text-sm font-mono text-[var(--color-muted)] hover:text-[var(--color-accent)]">
+        View all →
+      </a>
+    )}
+  </div>
+  
+  {hasPosts ? (
+    <div class="grid gap-4">
+      {posts.map((post) => (
+        <a href={`/blog/${post.slug}`} class="card p-6 group block">
+          <div class="flex flex-wrap items-baseline justify-between gap-2 mb-2">
+            <h3 class="text-lg font-semibold group-hover:text-[var(--color-accent)] transition-colors">
+              {post.title}
+            </h3>
+            <span class="text-sm text-[var(--color-muted)] font-mono">
+              {post.date}
+            </span>
+          </div>
+          <p class="text-[var(--color-muted)]">
+            {post.excerpt}
+          </p>
+          {post.tags && (
+            <div class="flex flex-wrap gap-2 mt-3">
+              {post.tags.map((tag) => (
+                <span class="text-xs font-mono text-[var(--color-muted)] bg-[var(--color-bg)] px-2 py-1 rounded border border-[var(--color-border)]">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="card p-6 text-center">
+      <p class="text-[var(--color-muted)] mb-2">
+        Writing about building things, breaking things, and occasionally fixing them.
+      </p>
+      <p class="text-sm font-mono text-[var(--color-muted)]">
+        First posts coming soon.
+      </p>
+    </div>
+  )}
+</section>
+
+<div class="section-divider"></div>
