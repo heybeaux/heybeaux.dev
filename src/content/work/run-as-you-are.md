@@ -47,9 +47,11 @@ I also shipped frontend work — building pieces of the web presence that suppor
 
 ## What I Learned
 
-Web3 in 2022 was the Wild West. A lot of projects were pure speculation. What made RAYA different was that we started with a real community — runners who already loved the store — and asked how technology could enhance that connection.
+Web3 in 2022 was the Wild West. A lot of projects were pure speculation — cash grabs with no underlying value.
 
-The RFID shoe activation was a highlight. When you see someone scan their shoe and watch their unique animation appear, you realize the tech isn't the point — it's the experience it enables.
+What made RAYA different was legitimacy. We weren't anon founders launching a JPEG collection. We were backed by an established brick-and-mortar business with years of community trust. Vancouver Running Company had real customers, real relationships, real reputation. That foundation meant we could experiment with Web3 without it feeling like a scam.
+
+The design intention was solid: use emerging tech to enhance an existing community, not manufacture a fake one. The RFID shoe activation was a highlight — when you see someone scan their shoe and watch their unique animation appear, you realize the tech isn't the point. It's the experience it enables.
 
 ## Where It Went
 

@@ -1,10 +1,9 @@
 ---
 name: "Kardio"
 role: "Director of Product & Development"
-period: "2020 — 2022"
+period: "2022 — 2025"
 status: "completed"
-externalLink: "https://kardioactive.com"
-tech: ["React Native", "D3.js", "TestFlight", "GitHub Actions", "Firebase"]
+tech: ["React Native", "D3.js", "TestFlight", "GitHub Actions", "Supabase"]
 challenge: "Heart health apps are either boring medical utilities or fitness trackers that don't speak to casual users. Kardio's vision was different: make heart health engaging through gamification, community, and a distinctive pixel-art aesthetic."
 solution: "I grew from PM into leading both product and development. Built out proper test suites and CI/CD pipelines that cut deployment time from weeks to under 10 minutes. Shaped the product direction while shipping code myself."
 outcome: "Successfully launched on the App Store. Built a sustainable development process that let a small team ship with confidence. Learned that the line between 'product' and 'engineering' is mostly artificial."
@@ -52,7 +51,7 @@ Heart rate data is inherently visual. Using D3.js, we built visualizations that 
 
 - **React Native**: Cross-platform mobile development
 - **D3.js**: Data visualization for heart rate trends
-- **Firebase**: Backend services and real-time sync
+- **Supabase**: Backend services and database
 - **TestFlight**: iOS beta distribution
 - **GitHub Actions**: CI/CD automation
 
@@ -66,4 +65,4 @@ Heart rate data is inherently visual. Using D3.js, we built visualizations that 
 
 ## Where It Is Now
 
-Kardio is live on the App Store, helping people engage with their heart health in a way that feels more like play than work.
+Kardio has sunset. The app was taken down from the App Store in 2025. But the work mattered — we proved that heart health apps don't have to be boring, and the CI/CD practices I built there still inform how I ship software today.
