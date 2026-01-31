@@ -1,0 +1,34 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FAFAF9"/>
+  <rect x="40" y="40" width="720" height="320" rx="8" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="2"/>
+  
+  <!-- Sidebar -->
+  <rect x="40" y="40" width="180" height="320" fill="#1A1A1A"/>
+  <rect x="60" y="80" width="140" height="12" rx="2" fill="#FFFFFF" opacity="0.8"/>
+  <rect x="60" y="110" width="100" height="8" rx="2" fill="#FFFFFF" opacity="0.3"/>
+  <rect x="60" y="130" width="120" height="8" rx="2" fill="#FFFFFF" opacity="0.3"/>
+  <rect x="60" y="150" width="80" height="8" rx="2" fill="#FFFFFF" opacity="0.3"/>
+  
+  <!-- Main content area -->
+  <rect x="240" y="60" width="500" height="40" rx="4" fill="#F0F0F0"/>
+  <rect x="260" y="75" width="200" height="10" rx="2" fill="#737373" opacity="0.5"/>
+  
+  <!-- Data cards representing prospects -->
+  <rect x="240" y="120" width="240" height="100" rx="4" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="1"/>
+  <circle cx="280" cy="160" r="20" fill="#D97706"/>
+  <rect x="310" y="145" width="120" height="10" rx="2" fill="#1A1A1A"/>
+  <rect x="310" y="165" width="150" height="8" rx="2" fill="#737373" opacity="0.5"/>
+  <rect x="310" y="185" width="80" height="20" rx="2" fill="#22C55E" opacity="0.2"/>
+  <text x="350" y="199" font-family="monospace" font-size="10" fill="#22C55E">High Intent</text>
+  
+  <rect x="500" y="120" width="240" height="100" rx="4" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="1"/>
+  <circle cx="540" cy="160" r="20" fill="#3B82F6"/>
+  <rect x="570" y="145" width="120" height="10" rx="2" fill="#1A1A1A"/>
+  <rect x="570" y="165" width="150" height="8" rx="2" fill="#737373" opacity="0.5"/>
+  <rect x="570" y="185" width="80" height="20" rx="2" fill="#D97706" opacity="0.2"/>
+  <text x="610" y="199" font-family="monospace" font-size="10" fill="#D97706">Medium</text>
+  
+  <!-- Text -->
+  <text x="490" y="300" font-family="monospace" font-size="24" fill="#1A1A1A" text-anchor="middle">WhaleHawk</text>
+  <text x="490" y="330" font-family="sans-serif" font-size="14" fill="#737373" text-anchor="middle">Healthcare Sales Intelligence</text>
+</svg>

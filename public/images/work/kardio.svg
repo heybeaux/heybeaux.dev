@@ -1,0 +1,57 @@
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#FAFAF9"/>
+  <rect x="40" y="40" width="720" height="320" rx="8" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="2"/>
+  
+  <!-- Phone mockup -->
+  <rect x="300" y="60" width="200" height="280" rx="24" fill="#1A1A1A"/>
+  <rect x="310" y="75" width="180" height="250" rx="4" fill="#2D1B4E"/>
+  
+  <!-- Pixel art heart -->
+  <rect x="370" y="100" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="382" y="100" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="394" y="100" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="418" y="100" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="430" y="100" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="442" y="100" width="12" height="12" fill="#FF6B6B"/>
+  
+  <rect x="358" y="112" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="370" y="112" width="12" height="12" fill="#FF8E8E"/>
+  <rect x="382" y="112" width="12" height="12" fill="#FF8E8E"/>
+  <rect x="394" y="112" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="406" y="112" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="418" y="112" width="12" height="12" fill="#FF8E8E"/>
+  <rect x="430" y="112" width="12" height="12" fill="#FF8E8E"/>
+  <rect x="442" y="112" width="12" height="12" fill="#FF6B6B"/>
+  <rect x="454" y="112" width="12" height="12" fill="#FF6B6B"/>
+  
+  <rect x="358" y="124" width="108" height="12" fill="#FF6B6B"/>
+  <rect x="370" y="124" width="84" height="12" fill="#FF8E8E"/>
+  
+  <rect x="370" y="136" width="84" height="12" fill="#FF6B6B"/>
+  <rect x="382" y="148" width="60" height="12" fill="#FF6B6B"/>
+  <rect x="394" y="160" width="36" height="12" fill="#FF6B6B"/>
+  <rect x="406" y="172" width="12" height="12" fill="#FF6B6B"/>
+  
+  <!-- Stats display -->
+  <text x="400" y="210" font-family="monospace" font-size="32" fill="#FFFFFF" text-anchor="middle">142</text>
+  <text x="400" y="230" font-family="monospace" font-size="12" fill="#A78BFA" text-anchor="middle">BPM</text>
+  
+  <!-- Progress bar -->
+  <rect x="330" y="250" width="140" height="16" rx="8" fill="#4C1D95"/>
+  <rect x="330" y="250" width="98" height="16" rx="8" fill="#D97706"/>
+  
+  <!-- XP/Level -->
+  <text x="400" y="290" font-family="monospace" font-size="14" fill="#22C55E" text-anchor="middle">LVL 24 • 1,842 XP</text>
+  
+  <!-- Decorative pixels outside phone -->
+  <rect x="180" y="120" width="8" height="8" fill="#FF6B6B" opacity="0.5"/>
+  <rect x="200" y="140" width="8" height="8" fill="#D97706" opacity="0.5"/>
+  <rect x="160" y="180" width="8" height="8" fill="#22C55E" opacity="0.5"/>
+  
+  <rect x="612" y="130" width="8" height="8" fill="#A78BFA" opacity="0.5"/>
+  <rect x="632" y="160" width="8" height="8" fill="#FF6B6B" opacity="0.5"/>
+  <rect x="620" y="200" width="8" height="8" fill="#D97706" opacity="0.5"/>
+  
+  <!-- Text -->
+  <text x="400" y="370" font-family="monospace" font-size="24" fill="#1A1A1A" text-anchor="middle">Kardio</text>
+</svg>
