@@ -1,9 +1,9 @@
 ---
 title: "Anti-Kaizen: ADHD, AI, and the Art of Working With Your Brain"
-description: "How conversational AI became the counter-balance to ADHD's incremental chaos"
-pubDate: 2026-02-02
-author: "Beaux Walton"
+date: 2026-02-02
+excerpt: "ADHD doesn't do incremental improvement. It does incremental chaos. Here's how conversational AI became my counter-balance."
 tags: ["adhd", "ai", "productivity", "neurodiversity"]
+draft: false
 ---
 
 # Anti-Kaizen: ADHD, AI, and the Art of Working With Your Brain
