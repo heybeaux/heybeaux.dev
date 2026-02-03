@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-date: 2026-01-30
+date: 2026-01-29
 excerpt: "First post. Why I'm writing, what to expect, and a bit about how this site came together."
 tags: ["meta", "intro"]
 draft: false
