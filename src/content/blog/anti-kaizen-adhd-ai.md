@@ -6,8 +6,6 @@ tags: ["adhd", "ai", "productivity", "neurodiversity"]
 draft: false
 ---
 
-# Anti-Kaizen: ADHD, AI, and the Art of Working With Your Brain
-
 Years ago, when I worked for Kintec — a footwear and orthoses specialist in Vancouver — they brought in a motivational speaker for our Christmas party. He introduced us to the Japanese concept of **Kaizen**: continuous improvement through small, incremental changes.
 
 The idea is elegant. Each day, you make something just a little bit better. It doesn't matter how small the improvement. Over time, these tiny gains compound into massive transformation.
