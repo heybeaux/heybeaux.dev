@@ -20,7 +20,7 @@ Of course. I'll never say no to someone who wants to grow their skills. Pull up 
 
 ## The Spiral
 
-Four hours later, we were still staring at the same screen.
+Two hours later, we were still staring at the same screen.
 
 The logic wasn't complicated. Look up the contact by email. Find them in the campaign using the campaign ID. Update their RSVP status. Three steps. Clean. Simple.
 
@@ -54,7 +54,7 @@ It didn't help.
 
 ## Too Many Threads
 
-By 5:00 PM, I told her I had to step away.
+By 4:00 PM, I told her I had to step away.
 
 Here's the thing about my ADHD: it *loves* problems like this. The hyperfocus kicks in. The world narrows to a single point. Nothing exists except the puzzle.
 
@@ -72,7 +72,7 @@ I needed silence.
 
 ## The Quiet
 
-After dinner, the house was still. Kids asleep. No Slack. No calls.
+After work, the house was still. Kids were out with mum riding their bikes. No Slack. No calls.
 
 I opened my laptop and looked at the form responses one more time.
 
@@ -112,7 +112,7 @@ When it finally clicked, I shouted.
 
 My wife — bless her — looked up from across the room and said:
 
-"That's great, babe. Now can you please put your laptop away and finish eating?"
+"That's great, my love. Now can you please put your fucking laptop away and finish eating?"
 
 Fair.
 
