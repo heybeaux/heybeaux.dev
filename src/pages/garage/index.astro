@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry, render } from 'astro:content';
+
+const page = await getEntry('pages', 'garage');
+const { Content } = await render(page);
+---
+
+<Layout title="The Garage — Beaux Walton" description="Personal projects, experiments, and things I'm tinkering with after hours.">
+  <article class="garage-page">
+    <!-- Back to home -->
+    <a href="/" class="text-sm font-mono text-[var(--color-muted)] hover:text-[var(--color-accent)] mb-8 inline-block">
+      ← Back home
+    </a>
+    
+    <!-- Content from garage.md -->
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .garage-page {
+    max-width: 65ch;
+    margin: 0 auto;
+  }
+  
+  .prose {
+    line-height: 1.8;
+    font-size: 1.0625rem;
+  }
+  
+  .prose :global(h1) {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose :global(h2) {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 1.375rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .prose :global(h3) {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .prose :global(p) {
+    margin-bottom: 1.25rem;
+    color: var(--color-text);
+  }
+  
+  .prose :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  .prose :global(a:hover) {
+    color: var(--color-text);
+  }
+  
+  .prose :global(ul) {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+  
+  .prose :global(li) {
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose :global(strong) {
+    font-weight: 600;
+  }
+  
+  .prose :global(em) {
+    font-style: italic;
+  }
+  
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 2rem 0;
+  }
+  
+  .prose :global(blockquote) {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--color-muted);
+    font-style: italic;
+  }
+</style>
