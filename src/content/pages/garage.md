@@ -54,7 +54,7 @@ Open source memory infrastructure with ensemble vector search, a nightly Dream C
 
 ### UltraEdge — Endurance Event Planning
 
-**Status:** In Development | App Store target: Q1 2026
+**Status:** All CRUD screens complete, monetization spec done | App Store submission: End of February 2026
 
 A mobile app for planning ultras, triathlons, and endurance events. Because spreadsheets suck and existing apps miss the point.
 
@@ -64,9 +64,14 @@ A mobile app for planning ultras, triathlons, and endurance events. Because spre
 - **Crew coordination** — your support team gets their own view
 - **Drop bag management** — what goes where, when
 
+**Monetization:**
+- **Free tier** — full local functionality, plan your events on-device
+- **Premium ($5.99/mo)** — cloud sync across devices, advanced weight tracking analytics, crew collaboration features via RevenueCat
+
 **The Stack:**
 - React Native (Expo SDK 54)
 - Supabase backend
+- TypeScript throughout
 - RevenueCat for subscriptions
 
 **Design philosophy:** "Organic" aesthetic — forest greens, trail browns, sunrise oranges. Warm and approachable, not another sterile fitness app.
@@ -116,9 +121,9 @@ Projects I'm thinking about but haven't started yet:
 The entire Engram platform is open source under Apache 2.0. Six repositories, actively maintained, accepting contributions.
 
 ### OpenClaw
-Contributing to the OpenClaw project — an open-source AI agent framework. Currently have a PR open for message lifecycle hooks that enable memory capture.
+Active contributor to [OpenClaw](https://github.com/openclaw/openclaw) — an open-source AI agent framework. Beyond code contributions, I run two production AI agents (Rook and Kit) powered by OpenClaw that collaborate on code, fix bugs, and ship features in real-time.
 
-[PR #6384: Message lifecycle hooks](https://github.com/openclaw/openclaw/pull/6384)
+OpenClaw is the backbone of my daily AI workflow — and contributing back to the project that makes it possible just makes sense.
 
 ---
 
