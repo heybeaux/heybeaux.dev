@@ -13,29 +13,48 @@ This is where the side projects live — the stuff I build because I can't *not*
 
 ## Active Projects
 
-### Engram — Memory for AI Agents
+### Engram — Memory Infrastructure for AI Agents
 
-**Status:** In Development | [GitHub](https://github.com/heybeaux/engram)
+**Status:** Live — Self-Hosted & Cloud | [Website](https://openengram.ai) | [GitHub](https://github.com/heybeaux/engram) | [Dashboard](https://app.openengram.ai)
 
 AI agents wake up blank every session. They forget who you are, what you've discussed, what you decided. Engram fixes that.
 
-It's memory infrastructure for agents — persistent, semantic, layered. Think of it as giving your AI assistant an actual brain that survives between conversations.
+Open source memory infrastructure with ensemble vector search, a nightly Dream Cycle that consolidates memories like human sleep, knowledge graph extraction, and a full monitoring dashboard. Self-hosted with all features free, or hybrid with cloud.
+
+**By the numbers:**
+- 4,500+ memories in production
+- 1,500+ tests, 50%+ coverage
+- 124ms p50 recall latency
+- 4 local embedding models on Metal GPU
+- Ensemble search with Reciprocal Rank Fusion
 
 **The Stack:**
-- NestJS + Prisma + PostgreSQL
-- pgvector for semantic search
-- Multi-LLM support (OpenAI, Anthropic, Ollama)
-- TypeScript SDK for integration
+- NestJS + Prisma + PostgreSQL + pgvector
+- Ensemble embeddings (local + OpenAI + Cohere)
+- TypeScript SDK, MCP server for Claude Desktop
+- Next.js dashboard on Vercel, API on Railway
 
-**Current focus:** Memory Intelligence v2 — priority-based retrieval that ensures your constraints (allergies, preferences, rules) never get evicted by less important memories.
+**The ecosystem:**
+- [engram](https://github.com/heybeaux/engram) — Core API
+- [engram-embed](https://github.com/heybeaux/engram-embed) — Local embeddings on Metal GPU
+- [engram-dashboard](https://github.com/heybeaux/engram-dashboard) — Monitoring & management
+- [engram-mcp](https://github.com/heybeaux/engram-mcp) — MCP server for Claude Desktop
+- [engram-code](https://github.com/heybeaux/engram-code) — Semantic code search
+- [engram-client](https://github.com/heybeaux/engram-client) — TypeScript SDK
 
-*Born from frustration with my own AI assistant forgetting things I'd told it dozens of times.*
+**Recent milestones:**
+- Awareness Module (Waking Cycle) — pattern detection and insight generation
+- Memory Pools — multi-agent shared memory with attribution tracking
+- Cloud edition with billing, cross-device sync, and cloud backup
+- Fog Index — cognitive health scoring for memory systems
+
+*Born from frustration with my own AI assistant forgetting things I'd told it dozens of times. Now it's becoming the memory layer for AI.*
 
 ---
 
 ### UltraEdge — Endurance Event Planning
 
-**Status:** In Development | App Store target: February 2026
+**Status:** In Development | App Store target: Q1 2026
 
 A mobile app for planning ultras, triathlons, and endurance events. Because spreadsheets suck and existing apps miss the point.
 
@@ -91,7 +110,10 @@ Projects I'm thinking about but haven't started yet:
 
 ---
 
-## Open Source Contributions
+## Open Source
+
+### Engram Ecosystem
+The entire Engram platform is open source under Apache 2.0. Six repositories, actively maintained, accepting contributions.
 
 ### OpenClaw
 Contributing to the OpenClaw project — an open-source AI agent framework. Currently have a PR open for message lifecycle hooks that enable memory capture.

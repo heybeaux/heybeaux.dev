@@ -11,6 +11,44 @@ import Contact from '../components/Contact.astro';
 
 <Layout>
   <Hero />
+  
+  <!-- Featured Project Banner -->
+  <section class="mb-16">
+    <a href="https://openengram.ai" target="_blank" rel="noopener noreferrer" class="block card p-6 md:p-8 relative overflow-hidden group">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-[var(--color-accent)] opacity-5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:opacity-10 transition-opacity"></div>
+      <div class="relative">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="text-xs font-mono text-[var(--color-accent)] uppercase tracking-wider">Featured Project</span>
+          <span class="tag">Live</span>
+        </div>
+        <h3 class="text-2xl font-mono font-semibold mb-2">Engram</h3>
+        <p class="text-[var(--color-muted)] mb-4 max-w-xl">
+          Open source memory infrastructure for AI agents. Ensemble vector search, Dream Cycle consolidation, knowledge graphs — self-hosted or cloud.
+        </p>
+        <div class="flex flex-wrap gap-6 text-sm font-mono">
+          <div>
+            <span class="text-2xl font-semibold text-[var(--color-text)]">4,500+</span>
+            <span class="block text-xs text-[var(--color-muted)]">memories</span>
+          </div>
+          <div>
+            <span class="text-2xl font-semibold text-[var(--color-text)]">124ms</span>
+            <span class="block text-xs text-[var(--color-muted)]">p50 recall</span>
+          </div>
+          <div>
+            <span class="text-2xl font-semibold text-[var(--color-text)]">1,500+</span>
+            <span class="block text-xs text-[var(--color-muted)]">tests</span>
+          </div>
+          <div>
+            <span class="text-2xl font-semibold text-[var(--color-text)]">6</span>
+            <span class="block text-xs text-[var(--color-muted)]">open source repos</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <div class="section-divider"></div>
+  
   <About />
   <Work />
   <Blog />
