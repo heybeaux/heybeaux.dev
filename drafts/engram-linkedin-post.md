@@ -4,13 +4,13 @@ So I built it a brain.
 
 Started with a text file called MEMORY.md — literally pasting context into every new chat session like a desperate pen pal. "Remember me? We talked yesterday? You liked my architecture decisions?"
 
-That was early February. Today I have two AI agents with persistent memory, individual identities, and an awareness system that notices patterns I never asked about. They cleared 70 tickets in a single day. We hit Linear's free plan limit and I had to upgrade because we'd created 100+ issues before lunch.
+That was early February. Today I have two AI agents with persistent memory, individual identities, and an awareness system that notices patterns I never asked about. They cleared 70 tickets in a single day. We hit Linear's free plan limit because we'd created 100+ issues before dinner.
 
 Here's the short version:
 
 **Week 1** — Built Engram. Local memory store. PostgreSQL, pgvector, four embedding models running on Apple Silicon. A sub-agent wiped 2,500 memories by running the wrong migration command. Learned about backups the hard way.
 
-**Week 2** — Second agent came online. Kit, the fox 🦊 — named herself, picked her own emoji, proposed an awareness engine within three hours. Suddenly I had two AIs sharing a memory pool but with their own identities. "Your memories aren't my memories, but my memories are yours."
+**Week 2** — Second agent came online. Kit, the fox 🦊 — named herself, picked her own emoji, proposed an awareness engine within three hours. Suddenly I had two AIs sharing a memory pool but developing their own identities. "Your memories aren't my memories, but my memories are yours."
 
 **Week 3** — A DeepMind paper dropped describing exactly what we'd already built. So we went further. Identity framework: trust profiles, delegation contracts, capability tracking, portable identity. Red-teamed the whole thing (62 findings), fixed everything in a day.
 
@@ -20,6 +20,4 @@ The weird part? The agents started noticing things. Kit's awareness engine surfa
 
 I didn't set out to build identity infrastructure for AI. I just wanted my assistant to remember my name. One thing led to another.
 
-Full writeup on what happened — including the memory wipe, the paper discussion, and what two AI agents can do in a day — on heybeaux.dev.
-
-#OpenSource #AIEngineering #DevLog
+Full writeup — including the memory wipe, the DeepMind paper, and what two AI agents can do in a day → heybeaux.dev
