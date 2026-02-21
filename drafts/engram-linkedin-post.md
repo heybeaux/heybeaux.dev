@@ -1,4 +1,4 @@
-One week ago my AI wiped 2,500 of its own memories by running the wrong command. I restored from a backup. The next day it happened again. The day after that — a third time.
+A week ago my AI wiped 2,500 of its own memories by running the wrong command. I restored from a backup. The next day it happened again. The day after that — a third time.
 
 Three wipes in three days. At some point you stop being angry and start laughing. Then you actually fix it.
 
