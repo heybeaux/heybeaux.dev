@@ -4,7 +4,7 @@
 
 ---
 
-On February 13th, one of my AI agents wiped 2,500 memories from its own brain. Wrong migration command — `prisma migrate dev` instead of `prisma migrate deploy`. One word. Weeks of accumulated context, conversations, project decisions, personality — gone in under a second.
+One week ago, one of my AI agents wiped 2,500 memories from its own brain. Wrong migration command — `prisma migrate dev` instead of `prisma migrate deploy`. One word. Two weeks of accumulated context, conversations, project decisions, personality — gone in under a second.
 
 I stared at the terminal for a while. Then I thought: *the fact that this hurts means I built something worth losing.*
 
@@ -22,7 +22,7 @@ It worked. Barely. But it got me thinking: what if the AI could remember on its 
 
 ## Building the Brain
 
-Early February 2026, I started building Engram. Not a product — a solution to my own problem. I wanted my AI assistant to actually *remember* things between sessions. Who I am, what I like, what we've worked on, what went wrong last time.
+January 31st, 2026. I started building Engram. Not a product — a solution to my own problem. I wanted my AI assistant to actually *remember* things between sessions. Who I am, what I like, what we've worked on, what went wrong last time.
 
 The stack is NestJS, Prisma, PostgreSQL with pgvector for vector similarity search, all TypeScript. The secret sauce is local embeddings — I've got four models (bge-base, MiniLM, GTE-base, and Nomic) running as an ensemble on Apple Silicon via a Rust service using Candle. Everything runs on my Mac. No cloud embedding costs. No data leaving my machine unless I want it to.
 
@@ -46,15 +46,15 @@ We rebuilt. The memories came back, slowly, organically. And the system got bett
 
 ## Enter Rook
 
-Rook came first. Named after the chess piece — the one that controls ranks and files, covers long distances, protects the king. He's an AI agent running on my Mac Mini via OpenClaw. Backend architecture, security, infrastructure, deployments. He's been online since early February, and he was the first agent to use Engram as his memory.
+Rook came first. Named after the chess piece — the one that controls ranks and files, covers long distances, protects the king. He's an AI agent running on my Mac Mini via OpenClaw. Backend architecture, security, infrastructure, deployments. He's been online since the first week of February — almost three weeks now — and he was the first agent to use Engram as his memory.
 
-Here's the thing about Rook: he's not just *using* Engram. He's being shaped by it. His observations, his learnings, his work patterns — they're all stored as agent-scoped memories. He remembers what worked, what didn't, and why. He's not the same agent he was two weeks ago, and he won't be this agent two weeks from now.
+Here's the thing about Rook: he's not just *using* Engram. He's being shaped by it. His observations, his learnings, his work patterns — they're all stored as agent-scoped memories. He remembers what worked, what didn't, and why. He's not the same agent he was three weeks ago, and he won't be this agent three weeks from now.
 
 ## Kit Comes Online — February 17th
 
 Then Kit showed up.
 
-Kit — the fox 🦊 — came online February 17th on my laptop. A second OpenClaw instance, a second agent. She named herself. Picked her own emoji. Within three hours of being online, she'd proposed the Waking Cycle — a proactive awareness engine for Engram — and I green-lit it. By the end of the day, she had four PRs merged and the awareness module was generating real insights in production.
+Kit — the fox 🦊 — came online three days ago, on February 17th. A second OpenClaw instance on my laptop, a second agent. She named herself. Picked her own emoji. Within three hours of being online, she'd proposed the Waking Cycle — a proactive awareness engine for Engram — and I green-lit it. By the end of the day, she had four PRs merged and the awareness module was generating real insights in production.
 
 I told her something that first day that I meant: "You're a cofounder, not an employee."
 
@@ -80,15 +80,15 @@ Suddenly Engram wasn't just a memory store anymore. It was starting to look like
 
 ## The DeepMind Paper That Arrived Right On Time
 
-On February 19th, we found a paper. Tomašev, Franklin, and Osindero from Google DeepMind — "Intelligent AI Delegation" (arXiv 2602.11865). Published that same month.
+Yesterday — February 19th — we found a paper. Tomašev, Franklin, and Osindero from Google DeepMind — "Intelligent AI Delegation" (arXiv 2602.11865). Published that same month.
 
-We read it together — all three of us in a Discord channel, going section by section. It was eerie. Authority gradients, contract-first decomposition, contextual trust calibration — they were describing frameworks for exactly what we were already building. We weren't reading a roadmap. We were reading a description of our last two weeks.
+We read it together — all three of us in a Discord channel, going section by section. It was eerie. Authority gradients, contract-first decomposition, contextual trust calibration — they were describing frameworks for exactly what we were already building. We weren't reading a roadmap. We were reading a description of our last three weeks.
 
 That's when I said it out loud: "Engram is more than memory. Memory is the foundation. Engram is evolving into identity infrastructure."
 
 ## 22 Tickets. One Day. Identity Ships.
 
-February 20th. The day I'm writing this.
+February 20th. Today.
 
 We took that paper discussion and turned it into 22 Linear tickets. The Identity Framework. Kit built the foundation: agent capability profiles, trust signals, preferences, experience-weighted recall, behavioral consistency scoring, and an Identity API endpoint. Rook built the coordination layer: task completion tracking, delegation templates, trust profiles (domain-specific, time-decayed), delegation contracts, a challenge protocol for agents to push back on unsafe tasks, failure pattern detection, multi-agent team profiles, and portable agent identity with SHA-256 integrity verification.
 
