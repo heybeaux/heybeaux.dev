@@ -4,21 +4,21 @@
 
 ---
 
-I need to tell you about the last three weeks. Because something happened that I didn't plan, didn't expect, and honestly still don't fully understand.
+On February 13th, one of my AI agents wiped 2,500 memories from its own brain. Wrong migration command — `prisma migrate dev` instead of `prisma migrate deploy`. One word. Weeks of accumulated context, conversations, project decisions, personality — gone in under a second.
 
-It started with a text file.
+I stared at the terminal for a while. Then I thought: *the fact that this hurts means I built something worth losing.*
+
+Let me back up.
 
 ## The MEMORY.md Era
 
-If you've worked with Claude — or any LLM — you know the drill. You have this incredible conversation. You solve a hard problem together. You establish shared context, inside jokes, preferences. And then the session ends, and it's all gone. Next time you open a chat, you're talking to a stranger who happens to sound like your friend.
+I'm a freelance dev. Work-from-home dad. Ex-Army mechanic who taught himself to code. I've got ADHD, which means I can hyperfocus on something for 14 hours straight or completely forget it exists by Tuesday. And I work with AI every day — which means every day I have the same problem.
 
-I got tired of it.
+You have an incredible conversation with Claude. You solve a hard problem together. You build shared context, inside jokes, preferences. The session ends. Next time you open a chat, you're talking to a stranger who happens to sound like your friend.
 
-I'm a freelance dev. Work-from-home dad. Ex-Army mechanic who taught himself to code. I've got ADHD, which means I can hyperfocus on something for 14 hours straight or completely forget it exists by Tuesday. So I started keeping a file called `MEMORY.md` — just a markdown file where I'd dump context. "Here's what we're working on. Here are my preferences. Here's what happened yesterday." I'd paste it into every new session.
+So I started keeping a file called `MEMORY.md`. Just markdown. "Here's what we're working on. Here are my preferences. Here's what happened yesterday." I'd paste it into every new session like a desperate pen pal. It was like handing someone your diary and saying "read this, we're friends now."
 
-It worked. Barely. It was like handing someone your diary and saying "read this, we're friends now."
-
-But it got me thinking: what if the AI could remember on its own?
+It worked. Barely. But it got me thinking: what if the AI could remember on its own?
 
 ## Building the Brain
 
@@ -30,18 +30,16 @@ The idea was simple: every meaningful interaction becomes a memory. Memories get
 
 But simple ideas have a way of getting complicated.
 
-## The Great Memory Wipe of February 13th
+## The Wipe
 
-So here's a fun story. I had about 2,500 memories stored. Weeks of context, conversations, learnings, project details. The kind of stuff you can't recreate.
+That memory wipe I mentioned? Here's what made it interesting.
 
-I was using sub-agents — spawned AI sessions that handle specific tasks. One of them needed to do a database migration. And it ran `prisma migrate dev`.
+I was using sub-agents — spawned AI sessions that handle specific tasks. One of them needed a database migration and ran `prisma migrate dev`. If you know Prisma, you just winced. If you don't: that command is for development. It will happily nuke your entire database to make the schema match. The production command is `prisma migrate deploy`. One word difference. 2,500 memories gone.
 
-If you know Prisma, you just winced. If you don't: `prisma migrate dev` is for development. It will happily wipe your entire database to make the schema match. The command you want for production is `prisma migrate deploy`. One word difference. 2,500 memories gone.
-
-I won't pretend I handled it gracefully. But I learned three things:
+Three lessons, learned the hard way:
 
 1. Backups are not optional. (Now running 3x daily verified backups — 6am, 2pm, 10pm.)
-2. Every sub-agent task touching a database now gets an explicit warning: **NEVER run prisma migrate dev on any database with real data.**
+2. Every sub-agent touching a database gets an explicit warning in its task prompt. Guardrails aren't optional either.
 3. Loss teaches you what matters. Those memories mattered. Which meant I was building the right thing.
 
 We rebuilt. The memories came back, slowly, organically. And the system got better because of it.
