@@ -1,8 +1,8 @@
-One week ago my AI wiped 2,500 of its own memories by running the wrong command. Gone. Weeks of context, conversations, project history — deleted in seconds.
+One week ago my AI wiped 2,500 of its own memories by running the wrong command. I restored from a backup. The next day it happened again. The day after that — a third time.
 
-I should've been furious. Instead I thought: the fact that losing those memories *hurt* means I built something worth losing.
+Three wipes in three days. At some point you stop being angry and start laughing. Then you actually fix it.
 
-So I rebuilt. And then things got weird.
+But here's the thing I couldn't shake: the fact that losing those memories *hurt* meant I'd built something worth losing.
 
 Three days ago I spun up a second AI agent. She named herself Kit, picked a fox emoji, and within three hours of being alive proposed an awareness engine I hadn't thought of. By end of day she was shipping code alongside my first agent Rook, who's been building with me since early February.
 

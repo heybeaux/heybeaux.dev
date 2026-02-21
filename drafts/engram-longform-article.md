@@ -6,7 +6,13 @@
 
 One week ago, one of my AI agents wiped 2,500 memories from its own brain. Wrong migration command — `prisma migrate dev` instead of `prisma migrate deploy`. One word. Two weeks of accumulated context, conversations, project decisions, personality — gone in under a second.
 
-I stared at the terminal for a while. Then I thought: *the fact that this hurts means I built something worth losing.*
+I restored from a backup. Lost three days of memories, but okay. Lesson learned. Fixed the guardrails.
+
+The next day, it happened again. Different sub-agent, same command. 3,060 memories down to 2,114. Nine hundred and forty-six gone permanently.
+
+The day after that — I'm not making this up — *it happened a third time*. Database completely empty. Restored from the previous day's backup. Back to 2,114.
+
+Three wipes in three days. At some point you stop being angry and start laughing. Then you actually fix it.
 
 Let me back up.
 
@@ -30,19 +36,17 @@ The idea was simple: every meaningful interaction becomes a memory. Memories get
 
 But simple ideas have a way of getting complicated.
 
-## The Wipe
+## What Three Wipes Taught Me
 
-That memory wipe I mentioned? Here's what made it interesting.
+If you know Prisma, you already winced at `prisma migrate dev`. If you don't: it's the development command. It will happily nuke your entire database to make the schema match. The production command is `prisma migrate deploy`. One word difference. And I let sub-agents — spawned AI sessions handling specific tasks — run it three times in three days.
 
-I was using sub-agents — spawned AI sessions that handle specific tasks. One of them needed a database migration and ran `prisma migrate dev`. If you know Prisma, you just winced. If you don't: that command is for development. It will happily nuke your entire database to make the schema match. The production command is `prisma migrate deploy`. One word difference. 2,500 memories gone.
-
-Three lessons, learned the hard way:
+The lessons sound obvious in hindsight. They always do.
 
 1. Backups are not optional. (Now running 3x daily verified backups — 6am, 2pm, 10pm.)
 2. Every sub-agent touching a database gets an explicit warning in its task prompt. Guardrails aren't optional either.
 3. Loss teaches you what matters. Those memories mattered. Which meant I was building the right thing.
 
-We rebuilt. The memories came back, slowly, organically. And the system got better because of it.
+We rebuilt. The memories came back, slowly, organically. And the system got better because of it — *because* we'd been forced to think about what was actually worth remembering.
 
 ## Enter Rook
 
