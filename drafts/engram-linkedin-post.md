@@ -20,4 +20,4 @@ It's all open source. You can build this yourself.
 
 github.com/heybeaux/engram
 
-Full story on heybeaux.dev — including the memory wipe, the DeepMind coincidence, and what happens when your AI starts remembering who it is.
+Full story → https://heybeaux.dev/blog/what-happens-when-you-give-ai-memory
