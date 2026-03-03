@@ -1,8 +1,8 @@
 ---
 name: "Wilderness Committee"
-role: "Digital Fundraising Coordinator"
-period: "2019 — 2022"
-status: "completed"
+role: "Digital Fundraising Coordinator → External Consultant"
+period: "2023 — Present"
+status: "active"
 externalLink: "https://wildernesscommittee.org"
 tech: ["Salesforce", "Pardot", "Shopify", "FormAssembly", "Apsona", "Conga"]
 challenge: "I was hired into a brand new role, mid-Salesforce migration. The org had ambitious fundraising goals but was drowning in disconnected systems — Salesforce, Pardot, Shopify, FormAssembly, and more — with no one really owning the technical side."
