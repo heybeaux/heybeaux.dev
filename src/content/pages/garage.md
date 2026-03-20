@@ -22,8 +22,8 @@ AI agents wake up blank every session. They forget who you are, what you've disc
 Open source memory infrastructure with ensemble vector search, a nightly Dream Cycle that consolidates memories like human sleep, knowledge graph extraction, and a full monitoring dashboard. Self-hosted with all features free, or hybrid with cloud.
 
 **By the numbers:**
-- 4,500+ memories in production
-- 1,500+ tests, 50%+ coverage
+- 8,200+ memories in production
+- 2,816 tests
 - 124ms p50 recall latency
 - 4 local embedding models on Metal GPU
 - Ensemble search with Reciprocal Rank Fusion
@@ -46,7 +46,8 @@ Open source memory infrastructure with ensemble vector search, a nightly Dream C
 - Awareness Module (Waking Cycle) — pattern detection and insight generation
 - Memory Pools — multi-agent shared memory with attribution tracking
 - Cloud edition with billing, cross-device sync, and cloud backup
-- Fog Index — cognitive health scoring for memory systems
+- 5 discrete health metrics replacing the retired Fog Index
+- Automated dedup pipeline — detection, LLM classification, auto-resolution
 
 *Born from frustration with my own AI assistant forgetting things I'd told it dozens of times. Now it's becoming the memory layer for AI.*
 
@@ -54,7 +55,7 @@ Open source memory infrastructure with ensemble vector search, a nightly Dream C
 
 ### UltraEdge — Endurance Event Planning
 
-**Status:** All CRUD screens complete, monetization spec done | App Store submission: End of February 2026
+**Status:** All CRUD screens complete, monetization spec done | App Store submission pending
 
 A mobile app for planning ultras, triathlons, and endurance events. Because spreadsheets suck and existing apps miss the point.
 
@@ -105,11 +106,67 @@ Our house came with a fantastic walk-in greenhouse already in place. Only proble
 
 ---
 
+---
+
+### ACR — Agent Capability Runtime
+
+**Status:** Shipped | [GitHub](https://github.com/heybeaux/acr) | MIT License
+
+The missing context layer for AI agents. Instead of dumping every tool instruction into the context window, ACR loads capabilities at four resolution levels — index (~20 tokens), summary (~95), standard (~1,250), deep (~2,500+). Agents get what they need, nothing more.
+
+**By the numbers:**
+- 98% token reduction at cold start
+- 100% Task Resolver recall, 64.7% precision (autoresearch-optimized)
+- 105 tests across 7 suites
+- ~9,000 lines of TypeScript + Python implementation
+
+**Key features:**
+- Progressive LOD loading (like game engines, but for prompts)
+- Dynamic mount/unmount with state persistence
+- Multi-signal task resolution (triggers, keywords, tech stack, file patterns)
+- Spawn-time capability inheritance for multi-agent systems
+
+---
+
+### AWM — Agent Workflow Model
+
+**Status:** Shipped | [GitHub](https://github.com/heybeaux/awm) | MIT License
+
+Predictive execution for agent pipelines. AWM observes past runs and adapts future ones — routing to cheaper models when safe, pre-injecting constraints to prevent failures, and skipping unnecessary steps.
+
+**By the numbers:**
+- Grade A benchmark (8/8 scenarios)
+- 81.5% prediction accuracy
+- 59.6% cost reduction via model routing (synthetic benchmark)
+- 7-run cold start
+- Self-optimizing via autoresearch meta-optimizer
+
+**The stack within the stack:**
+- Bayesian Beta distributions for outcome beliefs
+- Thompson Sampling for model routing (explore vs exploit)
+- Constraint pattern extraction from approval gate rejections
+- Zero-dependency core, Engram adapter, Mastra/Forge middleware
+
+---
+
+### ChalkBreaker — Playoff Bracket Optimizer
+
+**Status:** Live | [chalkbreaker.com](https://chalkbreaker.com)
+
+Monte Carlo simulation engine that generates EV-optimized brackets for playoff pools. 50,000 simulations, 4 verified data sources, 263 automated data integrity checks. Currently supporting March Madness and NHL Playoffs.
+
+**What makes it different:**
+- Expected Value optimization per scoring format (not just "pick the favorite")
+- Best-of-7 series simulation with 2-2-1-1-1 home ice, OT compression
+- Every stat verified and cited — built-in safeguards against fabricated data
+- 70% historical backtest accuracy on 30 real NHL playoff series
+
+---
+
 ## On the Bench
 
 Projects I'm thinking about but haven't started yet:
 
-- **Agent-to-Agent Protocol** — What if AI assistants could talk to each other?
 - **Local-First Sync Engine** — CRDTs for offline-first apps without the complexity
 - **Voice Journal** — Daily audio notes that self-organize
 
