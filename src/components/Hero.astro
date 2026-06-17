@@ -1,48 +1,29 @@
 ---
-// Hero section - central domain framing
+// Hero section - Name, one-liner, current work
 ---
 
-<section class="mb-16 md:mb-20">
-  <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-    <div>
-      <p class="font-mono text-sm text-[var(--color-accent)] mb-5">
-        heybeaux.dev / root domain
-      </p>
-      <h1 class="text-5xl md:text-7xl leading-[0.98] max-w-4xl text-[var(--color-ink)]">
-        Beaux builds the thing between the idea and the working system.
-      </h1>
-    </div>
-
-    <div class="card p-6 md:p-7 bg-[rgba(255,255,255,0.72)]">
-      <p class="text-lg md:text-xl leading-relaxed mb-5">
-        This is the central index for my products, labs, agent infrastructure, and client work.
-      </p>
-      <p class="text-[var(--color-muted)] mb-6">
-        Ginnung, Sonder, and AWM can keep their own universe. Wavelength, DripCtl, The Trash Panda, and whatever comes next get room to look and sound like themselves.
-      </p>
-      <div class="flex flex-wrap gap-3">
-        <a href="#projects" class="btn inline-flex items-center justify-center px-4 py-2 bg-[var(--color-accent)] text-white font-medium rounded">
-          Explore projects
-        </a>
-        <a href="mailto:hello@heybeaux.dev" class="btn inline-flex items-center justify-center px-4 py-2 border border-[var(--color-border)] text-[var(--color-text)] font-medium rounded bg-white">
-          Start a conversation
-        </a>
-      </div>
-    </div>
+<section class="mb-16">
+  <!-- Name with accent underline -->
+  <div class="mb-6">
+    <h1 class="text-4xl md:text-5xl mb-2 inline-block">
+      Hey, I'm Beaux.
+      <span class="block h-1 bg-[var(--color-accent)] mt-2 w-24"></span>
+    </h1>
   </div>
-
-  <div class="mt-8 grid gap-3 sm:grid-cols-3">
-    <div class="border-l-2 border-[var(--color-accent)] pl-4">
-      <p class="font-mono text-xs uppercase text-[var(--color-muted)] mb-1">Now</p>
-      <p class="font-medium">Agent systems, SaaS tools, Salesforce integrations</p>
-    </div>
-    <div class="border-l-2 border-[#8B5CF6] pl-4">
-      <p class="font-mono text-xs uppercase text-[var(--color-muted)] mb-1">Base</p>
-      <p class="font-medium">Powell River, BC · Pacific time</p>
-    </div>
-    <div class="border-l-2 border-[#D97706] pl-4">
-      <p class="font-mono text-xs uppercase text-[var(--color-muted)] mb-1">Mode</p>
-      <p class="font-medium">Build fast, keep it useful, make it legible</p>
-    </div>
+  
+  <!-- Location with status -->
+  <p class="text-[var(--color-muted)] text-base mb-8 flex items-center font-mono">
+    <span class="status-dot"></span>
+    Powell River, BC · Available for projects
+  </p>
+  
+  <!-- Tagline in a subtle card -->
+  <div class="card p-6 md:p-8">
+    <p class="text-xl md:text-2xl leading-relaxed mb-4">
+      Building the operating system for AI agents.
+    </p>
+    <p class="text-lg text-[var(--color-muted)]">
+      Army mechanic turned self-taught developer. I build open source infrastructure that makes AI agents smarter, cheaper, and more reliable — memory systems, context management, predictive execution, and multi-agent orchestration. One interconnected ecosystem, all MIT-licensed.
+    </p>
   </div>
 </section>

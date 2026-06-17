@@ -7,8 +7,8 @@ interface Props {
 }
 
 const { 
-  title = "heybeaux.dev — Beaux Walton", 
-  description = "The central domain for Beaux Walton's products, labs, agent infrastructure, and client work." 
+  title = "Beaux Walton — Developer", 
+  description = "Ex-army mechanic turned coder. I build whatever needs building." 
 } = Astro.props;
 ---
 
@@ -35,28 +35,18 @@ const {
     </script>
   </head>
   <body class="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
-    <header class="border-b border-[var(--color-border)] bg-[rgba(247,246,242,0.86)] backdrop-blur">
-      <nav class="max-w-6xl mx-auto px-5 md:px-8 py-4 flex flex-wrap items-center justify-between gap-4">
-        <a href="/" class="font-mono text-sm text-[var(--color-text)] hover:text-[var(--color-accent)]">
-          heybeaux.dev
-        </a>
-        <div class="flex flex-wrap items-center gap-4 text-sm font-mono text-[var(--color-muted)]">
-          <a href="/#projects">Projects</a>
-          <a href="/#about">About</a>
-          <a href="/blog">Writing</a>
-          <a href="/#contact">Contact</a>
-        </div>
-      </nav>
-    </header>
+    <!-- Top accent bar -->
+    <div class="h-1 bg-[var(--color-accent)]"></div>
     
-    <main class="max-w-6xl mx-auto px-5 md:px-8 py-10 md:py-16">
+    <main class="max-w-3xl mx-auto px-6 py-12 md:py-20">
       <slot />
     </main>
     
-    <footer class="border-t border-[var(--color-border)] mt-20 bg-[rgba(255,255,255,0.45)]">
-      <div class="max-w-6xl mx-auto px-5 md:px-8 py-8">
+    <!-- Footer -->
+    <footer class="border-t border-[var(--color-border)] mt-20">
+      <div class="max-w-3xl mx-auto px-6 py-8">
         <p class="text-sm text-[var(--color-muted)] font-mono">
-          Made in Powell River, BC · central domain for products, labs, and client work · {new Date().getFullYear()}
+          Made in Powell River, BC · {new Date().getFullYear()}
         </p>
       </div>
     </footer>
