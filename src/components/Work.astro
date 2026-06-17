@@ -1,150 +1,293 @@
 ---
-// Work section - Project cards
+// Project directory - central domain cards
 
 interface Project {
   name: string;
-  slug: string;
+  eyebrow: string;
   role: string;
   description: string;
+  category: 'Products' | 'Agent Stack' | 'Client Work';
   tech?: string[];
-  externalLink?: string;
-  status?: 'active' | 'completed';
+  link?: string;
+  status?: 'active' | 'in-progress' | 'client' | 'archive' | 'private';
+  accent: string;
+  tint: string;
 }
 
 const projects: Project[] = [
   {
-    name: "Engram",
-    slug: "engram",
-    role: "Founder / Lead Developer",
-    description: "Open source memory infrastructure for AI agents. Self-hosted or cloud. Ensemble vector search, nightly Dream Cycle consolidation, knowledge graphs, and a monitoring dashboard. 8,200+ memories in production, 2,816 tests. The memory layer of the ecosystem.",
-    tech: ["NestJS", "Prisma", "PostgreSQL", "pgvector", "TypeScript"],
-    externalLink: "https://openengram.ai",
-    status: "active"
+    name: "Wavelength",
+    eyebrow: "wavelength.heybeaux.dev",
+    role: "Standalone product",
+    category: "Products",
+    description: "Personality-aware communication coaching for teams. Slack and Gmail suggestions adapt to the recipient's profile without storing message content.",
+    tech: ["Next.js", "NestJS", "Slack", "Gmail", "Claude"],
+    link: "https://wavelength.heybeaux.dev",
+    status: "in-progress",
+    accent: "#2563EB",
+    tint: "#DBEAFE"
   },
   {
-    name: "ACR",
-    slug: "acr",
-    role: "Creator",
-    description: "Agent Capability Runtime — the missing context layer for AI agents. Manages what goes into an agent's context window: which capabilities are loaded, at what resolution, within what budget. 98% token reduction at cold start, 100% recall, 64.7% precision. 105 tests.",
-    tech: ["TypeScript", "Zero Dependencies"],
-    externalLink: "https://github.com/heybeaux/acr",
-    status: "active"
+    name: "DripCtl",
+    eyebrow: "dripctl.heybeaux.dev",
+    role: "Developer tool",
+    category: "Products",
+    description: "API-first email sequence engine. Define lifecycle sequences in TypeScript, send through your own provider, and let Cadence optimize over time.",
+    tech: ["NestJS", "BullMQ", "PostgreSQL", "TypeScript"],
+    link: "https://dripctl.heybeaux.dev",
+    status: "in-progress",
+    accent: "#DC2626",
+    tint: "#FEE2E2"
   },
   {
-    name: "AWM",
-    slug: "awm",
-    role: "Creator",
-    description: "Agent Workflow Model — predictive execution for agent pipelines. Uses Bayesian statistics and multi-armed bandits to predict outcomes, route to cheaper models, and pre-inject constraints that prevent failures. Grade A benchmark, 81.5% prediction accuracy, self-optimizing via autoresearch.",
-    tech: ["TypeScript", "Bayesian Stats", "Thompson Sampling"],
-    externalLink: "https://github.com/heybeaux/awm",
-    status: "active"
+    name: "The Trash Panda",
+    eyebrow: "trashpanda.heybeaux.dev",
+    role: "Experiment",
+    category: "Products",
+    description: "A scrappy product lane for the useful, weird, half-feral ideas that do not belong inside the agent stack but still deserve daylight.",
+    tech: ["Prototype", "Brand", "Automation"],
+    link: "https://trashpanda.heybeaux.dev",
+    status: "in-progress",
+    accent: "#52525B",
+    tint: "#E4E4E7"
   },
   {
     name: "ChalkBreaker",
-    slug: "chalkbreaker",
+    eyebrow: "chalkbreaker.com",
     role: "Founder",
-    description: "Monte Carlo simulation engine for sports playoff brackets. 50,000 simulations, EV-optimized picks for your pool's scoring format. Live for March Madness and NHL playoffs. Data-verified with 263 automated integrity checks — every stat cited, every claim verifiable.",
+    category: "Products",
+    description: "Monte Carlo simulation engine for sports playoff brackets. 50,000 simulations, EV-optimized picks for your pool's scoring format, and data-verified claims.",
     tech: ["Next.js", "TypeScript", "Vercel", "Stripe"],
-    externalLink: "https://chalkbreaker.com",
-    status: "active"
+    link: "https://chalkbreaker.com",
+    status: "active",
+    accent: "#EA580C",
+    tint: "#FFEDD5"
+  },
+  {
+    name: "Engram",
+    eyebrow: "openengram.ai",
+    role: "Founder / Lead Developer",
+    category: "Agent Stack",
+    description: "Open source memory infrastructure for AI agents. Self-hosted or cloud, with ensemble vector search, Dream Cycle consolidation, knowledge graphs, and monitoring.",
+    tech: ["NestJS", "Prisma", "PostgreSQL", "pgvector", "TypeScript"],
+    link: "https://openengram.ai",
+    status: "active",
+    accent: "#7C3AED",
+    tint: "#EDE9FE"
+  },
+  {
+    name: "ACR",
+    eyebrow: "github.com/heybeaux/acr",
+    role: "Creator",
+    category: "Agent Stack",
+    description: "Agent Capability Runtime. Context management that loads the right capabilities at the right resolution and budget, with major token reduction at cold start.",
+    tech: ["TypeScript", "Zero Dependencies", "Context"],
+    link: "https://github.com/heybeaux/acr",
+    status: "active",
+    accent: "#9333EA",
+    tint: "#F3E8FF"
+  },
+  {
+    name: "AWM",
+    eyebrow: "github.com/heybeaux/awm",
+    role: "Creator",
+    category: "Agent Stack",
+    description: "Agent Workflow Model. Predictive execution for agent pipelines using statistics and routing signals to prevent failures and reduce cost.",
+    tech: ["TypeScript", "Bayesian Stats", "Routing"],
+    link: "https://github.com/heybeaux/awm",
+    status: "active",
+    accent: "#16A34A",
+    tint: "#DCFCE7"
+  },
+  {
+    name: "Ginnung",
+    eyebrow: "ginnung.heybeaux.dev",
+    role: "Control plane",
+    category: "Agent Stack",
+    description: "The user-facing cockpit for Sonder: faculty registry, runtime visibility, wiring UI, and the place where the agent ecosystem becomes operable.",
+    tech: ["Astro", "Control Plane", "Agents"],
+    link: "https://ginnung.heybeaux.dev",
+    status: "active",
+    accent: "#6D28D9",
+    tint: "#EDE9FE"
+  },
+  {
+    name: "Sonder",
+    eyebrow: "sonder.heybeaux.dev",
+    role: "Runtime",
+    category: "Agent Stack",
+    description: "A signed event bus for agent cognition. Every action becomes a structured, auditable event with memory, reasoning, governance, capability, prediction, and intent context.",
+    tech: ["TypeScript", "SQLite", "ed25519", "SDK"],
+    link: "https://sonder.heybeaux.dev",
+    status: "active",
+    accent: "#0891B2",
+    tint: "#CFFAFE"
+  },
+  {
+    name: "Forge",
+    eyebrow: "private orchestration layer",
+    role: "Orchestration layer",
+    category: "Agent Stack",
+    description: "Multi-agent pipelines with approval workflows, client profiles, and sector-aware agents. The execution layer sitting above the open source stack.",
+    tech: ["Mastra", "Next.js", "Agents"],
+    status: "private",
+    accent: "#A16207",
+    tint: "#FEF3C7"
   },
   {
     name: "Generosity Catalyst",
-    slug: "generosity-catalyst",
+    eyebrow: "generositycatalyst.com",
     role: "CTO",
-    description: "Lightweight CRM built for nonprofits who want real donor relationships, not automation funnels. Guided touchpoints prompt staff to reach out at the right moments — birthdays, anniversaries, follow-ups. I own the full stack: architecture, infrastructure, and shipping features. Anti-AI-slop by design.",
+    category: "Client Work",
+    description: "Lightweight CRM built for nonprofits who want real donor relationships, not automation funnels. I own architecture, infrastructure, and weekly feature shipping.",
     tech: ["Next.js", "Supabase", "Stripe"],
-    externalLink: "https://generositycatalyst.com",
-    status: "active"
+    link: "https://generositycatalyst.com",
+    status: "client",
+    accent: "#0E7C7B",
+    tint: "#DCEFED"
   },
   {
     name: "WhaleHawk",
-    slug: "whalehawk",
+    eyebrow: "whalehawk.com",
     role: "Full-Stack Developer",
-    description: "Sales intelligence platform for healthcare. AI-powered research tools that help medical device sales teams find the right prospects faster. I work across the landing site, web app, and own the Salesforce integration.",
+    category: "Client Work",
+    description: "Sales intelligence platform for healthcare. I work across the landing site, web app, and Salesforce integration that brings prospect intelligence into the CRM.",
     tech: ["Apex", "LWC", "React"],
-    externalLink: "https://whalehawk.com",
-    status: "active"
+    link: "https://whalehawk.com",
+    status: "client",
+    accent: "#1D4ED8",
+    tint: "#DBEAFE"
   },
   {
     name: "Wilderness Committee",
-    slug: "wilderness-committee",
+    eyebrow: "wildernesscommittee.org",
     role: "Digital Fundraising Coordinator",
-    description: "Hired into a new role mid-Salesforce migration. Ended up owning Salesforce admin, dev, and automation — plus Shopify, Pardot, and FormAssembly. Worked closely with donor relations to improve retention: 40% fewer lost monthly donors over 2 years. Built a formal data management plan that still guides the org today.",
+    category: "Client Work",
+    description: "Owned Salesforce admin, development, automation, and integrations during a major migration. Helped drive 40% fewer lost monthly donors over two years.",
     tech: ["Salesforce", "Pardot", "Shopify", "FormAssembly", "Apsona"],
-    externalLink: "https://wildernesscommittee.org",
-    status: "active"
+    link: "https://wildernesscommittee.org",
+    status: "archive",
+    accent: "#15803D",
+    tint: "#DCFCE7"
   },
   {
     name: "Run As You Are",
-    slug: "run-as-you-are",
+    eyebrow: "runasyouare.co",
     role: "Project Coordinator",
-    description: "Helped rebrand Vancouver Running Company into a global run membership powered by NFTs. Coordinated brand activations at On's NYC flagship during NFT.NYC and a Vancouver event with custom RFID-tagged shoes that triggered NFT animations on scan. Also shipped frontend work.",
+    category: "Client Work",
+    description: "Helped rebrand Vancouver Running Company into a global run membership, coordinating NFT.NYC and Vancouver activations with RFID-triggered experiences.",
     tech: ["NFT/Web3", "RFID", "POAP", "Frontend"],
-    externalLink: "https://runasyouare.co",
-    status: "completed"
+    link: "https://runasyouare.co",
+    status: "archive",
+    accent: "#BE123C",
+    tint: "#FFE4E6"
   },
   {
     name: "Kardio",
-    slug: "kardio",
+    eyebrow: "sunset product",
     role: "Director of Product & Development",
-    description: "Gamified heart health app with pixel-art style and deep progression systems. Started as PM, grew into leading dev and product. Cut deployment time from weeks to under 10 minutes via TestFlight by building out proper test suites and CI automation. Shipped to the App Store. Project sunset in 2025.",
+    category: "Client Work",
+    description: "Gamified heart health app with pixel-art style and deep progression systems. Led product and development, CI automation, and App Store shipping.",
     tech: ["React Native", "D3", "Supabase", "TestFlight", "CI/CD"],
-    status: "completed"
+    status: "archive",
+    accent: "#0F766E",
+    tint: "#CCFBF1"
   }
 ];
+
+const groups = ["Products", "Agent Stack", "Client Work"] as const;
+
+const statusLabel = {
+  active: "Active",
+  "in-progress": "In progress",
+  client: "Client",
+  archive: "Archive",
+  private: "Private"
+};
 ---
 
-<section id="work" class="mb-16">
-  <h2 class="text-sm font-mono text-[var(--color-accent)] mb-6 uppercase tracking-wider">
-    Work
-  </h2>
-  
-  <div class="grid gap-4">
-    {projects.map((project) => (
-      <article class="card p-6 group">
-        <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
-          <div class="flex items-center gap-3">
-            {project.externalLink ? (
-              <a href={project.externalLink} target="_blank" rel="noopener noreferrer" class="text-lg font-semibold group-hover:text-[var(--color-accent)] transition-colors flex items-center gap-2">
-                {project.name}
-                <svg class="w-4 h-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                </svg>
-              </a>
-            ) : (
-              <h3 class="text-lg font-semibold group-hover:text-[var(--color-accent)] transition-colors">
-                {project.name}
-              </h3>
-            )}
-            {project.status === 'active' && (
-              <span class="tag">Active</span>
-            )}
-          </div>
-          <span class="text-sm text-[var(--color-muted)] font-mono">
-            {project.role}
-          </span>
+<section id="projects" class="mb-16 md:mb-20">
+  <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+    <div>
+      <h2 class="text-sm font-mono text-[var(--color-accent)] mb-3 uppercase tracking-wider">
+        Project Directory
+      </h2>
+      <p class="text-3xl md:text-4xl font-semibold max-w-3xl leading-tight">
+        One domain, multiple product worlds.
+      </p>
+    </div>
+    <p class="max-w-sm text-[var(--color-muted)]">
+      The root site stays neutral. Each subdomain gets permission to use the design language that fits the thing it represents.
+    </p>
+  </div>
+
+  <div class="space-y-10">
+    {groups.map((group) => (
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <h3 class="font-mono text-xs uppercase tracking-wider text-[var(--color-muted)]">
+            {group}
+          </h3>
+          <div class="h-px flex-1 bg-[var(--color-border)]"></div>
         </div>
-        
-        <p class="text-[var(--color-muted)] mb-4">
-          {project.description}
-        </p>
-        
-        <div class="flex flex-wrap items-center justify-between gap-4">
-          {project.tech && (
-            <div class="flex flex-wrap gap-2">
-              {project.tech.map((t) => (
-                <span class="text-xs font-mono text-[var(--color-muted)] bg-[var(--color-bg)] px-2 py-1 rounded border border-[var(--color-border)]">
-                  {t}
-                </span>
-              ))}
-            </div>
-          )}
-          <a href={`/work/${project.slug}`} class="text-sm font-mono text-[var(--color-accent)] hover:underline">
-            Read more →
-          </a>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {projects.filter((project) => project.category === group).map((project) => (
+            <article class="card p-5 md:p-6 group h-full flex flex-col" style={`--project-accent: ${project.accent}; --project-tint: ${project.tint};`}>
+              <div class="flex items-start justify-between gap-4 mb-5">
+                <div>
+                  <p class="font-mono text-xs text-[var(--project-accent)] mb-2">
+                    {project.eyebrow}
+                  </p>
+                  <h4 class="text-2xl font-semibold leading-tight">
+                    {project.name}
+                  </h4>
+                </div>
+                {project.status && (
+                  <span class="tag shrink-0">{statusLabel[project.status]}</span>
+                )}
+              </div>
+
+              <p class="text-sm font-mono text-[var(--color-muted)] mb-3">
+                {project.role}
+              </p>
+              <p class="text-[var(--color-muted)] mb-5 flex-1">
+                {project.description}
+              </p>
+
+              {project.tech && (
+                <div class="flex flex-wrap gap-2 mb-5">
+                  {project.tech.map((t) => (
+                    <span class="text-xs font-mono text-[var(--color-muted)] bg-[var(--color-bg)] px-2 py-1 rounded border border-[var(--color-border)]">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" class="font-mono text-sm text-[var(--project-accent)]">
+                  Visit {project.eyebrow} →
+                </a>
+              )}
+            </article>
+          ))}
         </div>
-      </article>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="mb-16 md:mb-20">
+  <div class="grid gap-4 md:grid-cols-3">
+    {[
+      ["Root", "heybeaux.dev stays the index: who I am, what exists, and where each thing lives."],
+      ["Subdomains", "Project sites can use their own palette, layout, voice, and conversion goals."],
+      ["Ecosystems", "Related projects still cluster together, but standalone products no longer have to cosplay as Ginnung."]
+    ].map(([label, body]) => (
+      <div class="border-t-2 border-[var(--color-accent)] pt-4">
+        <p class="font-mono text-xs uppercase tracking-wider text-[var(--color-muted)] mb-2">{label}</p>
+        <p class="text-lg leading-relaxed">{body}</p>
+      </div>
     ))}
   </div>
 </section>

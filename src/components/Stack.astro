@@ -9,11 +9,11 @@ interface ToolCategory {
 const categories: ToolCategory[] = [
   {
     label: "Languages",
-    tools: ["TypeScript", "JavaScript", "Python", "Apex"]
+    tools: ["TypeScript", "Python", "Apex", "SQL"]
   },
   {
     label: "Frontend",
-    tools: ["React", "React Native", "Next.js", "Astro", "Tailwind", "LWC"]
+    tools: ["React", "Next.js", "Astro", "React Native", "LWC"]
   },
   {
     label: "Backend",
@@ -21,7 +21,7 @@ const categories: ToolCategory[] = [
   },
   {
     label: "AI / Agents",
-    tools: ["OpenClaw", "Mastra", "OpenRouter", "Engram", "Claude Code"]
+    tools: ["OpenClaw", "Sonder", "Engram", "Mastra", "OpenRouter", "Claude", "Codex"]
   },
   {
     label: "Infra",
@@ -30,16 +30,16 @@ const categories: ToolCategory[] = [
 ];
 ---
 
-<section class="mb-16">
+<section class="mb-16 md:mb-20">
   <h2 class="text-sm font-mono text-[var(--color-accent)] mb-6 uppercase tracking-wider">
     Toolkit
   </h2>
   
-  <p class="mb-6 text-[var(--color-muted)]">
-    What's been in rotation lately. Not a brag list — just what I've actually shipped with recently.
+  <p class="mb-6 text-[var(--color-muted)] max-w-2xl">
+    Current rotation. This changes as the work changes, which is exactly the point.
   </p>
   
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
     {categories.map((cat) => (
       <div class="space-y-2">
         <h3 class="text-xs font-mono text-[var(--color-muted)] uppercase tracking-wider">
